@@ -1,0 +1,27 @@
+/******************************************************************************
+
+E.(3) Two variables a and b contain values 10 and 20. Write a 
+program to interchange the contents of a and b without using 
+a third variable.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int a=10,b=20,c=100,d=200;
+    
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    
+    //OR
+    
+    c=c^d;
+    d=c^d;
+    c=c^d;
+    
+    printf("\na= %d, b= %d, c= %d, d= %d",a,b,c,d);
+    
+    return 0;
+}
