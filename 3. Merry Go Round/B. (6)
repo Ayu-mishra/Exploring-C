@@ -1,0 +1,31 @@
+/******************************************************************************
+
+B. (6) Write a program which finds a four digit number AABB which 
+is a perfect square. A and B represent different digits.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+  
+    int i,j,r,l,count;   
+    for ( i = 32; i < 100; i++) 
+    {
+        count=0;
+        j=i*i;
+        r= j%10;
+        j/=10;
+        r+=10*(j%10);
+        j/=10;
+        l= j%10;
+        j/=10;
+        l+=10*(j%10);
+        
+        if((r/10 == r%10) && (l/10 == l%10))
+            printf("%d\n",i*i);
+    }
+   
+
+    return 0;
+}
