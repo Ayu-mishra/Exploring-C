@@ -1,0 +1,40 @@
+/******************************************************************************
+
+B. (5) Write a program which finds four digit perfect squares where 
+the number represented by the first two digits and the number 
+represented by the last two digits are also perfect squares. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+  
+    int i,j,r,l,count;   
+    for ( i = 32; i < 100; i++) 
+    {
+        count=0;
+        j=i*i;
+        r= j%10;
+        j/=10;
+        r+=10*(j%10);
+        j/=10;
+        l= j%10;
+        j/=10;
+        l+=10*(j%10);
+        
+        for(int x=0; x<10; x++)
+        {
+            if(r==x*x)
+            count++;
+            if(l==x*x)
+            count++;
+        }
+        
+        if(count==2)
+        printf("%d\n",i*i);
+    }
+   
+
+    return 0;
+}
